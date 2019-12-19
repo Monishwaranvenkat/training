@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <style>
+            body{
+        background-color:black;
+            }
+            
+        table{
+            width: 15PX;
+            height: 15PX;
+            border-collapse: collapse;
+            border-color: black;
+            border-width: 200px;
+            background: linear-gradient(to bottom, #990099 0%, #cc0000 100%);
+            text-align: center;
+        }
+        
+        td{
+            padding: 5PX;
+        }
+        button{
+            width: 30px;
+            height: 30px;
+            background-color:transparent;
+            border-color: black;
+            color: whitesmoke;
+            font-size: medium;
+        }
+        input{
+            font-size: large;
+            text-align: right;
+            width: 200px;
+            height: 50px;
+            background-color:transparent;
+        }
+        #eq{
+            height: 50px;
+        }
+        </style>
+        <script>
+        function disp(var1)
+        {
+            
+
+            document.getElementById("result").value+=var1
+        }
+        function clr()
+        {
+           document.getElementById("result").value="" 
+        }
+        function solve() 
+         { 
+             var x = document.getElementById("result").value 
+             var y = eval(x) 
+             document.getElementById("result").value = y 
+         } 
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center; color: wheat;">SIMPLE CALCULATOR</h1>
+        <table>
+            <tr>
+                <td colspan="4"><input type="text" id="result"></td>
+            </tr>
+            <tr>
+               
+                <td><button onclick="clr()">clr</button></td>
+                <td><button onclick="disp('/')">/</button></td>
+                <td><button onclick="disp('%')">%</buttononclick="disp(1)"></td>
+                <td><button onclick="disp('*')">*</button></td>
+            </tr>
+            <tr>  
+                <td><button onclick="disp('1')">1</button></td>
+                <td><button onclick="disp('2')">2</button></td>
+                <td><button onclick="disp('3')">3</button></td>
+                 <td><button onclick="disp('-')">-</button></td>
+            </tr>
+               <tr>  
+                <td><button onclick="disp('4')">4</button></td>
+                <td><button onclick="disp('5')">5</button></td>
+                <td><button onclick="disp('6')">6</button></td>
+                 <td rowspan="2"><button onclick="disp('+')" id="eq">+</button></td>
+            </tr>   
+              <tr>  
+                <td><button onclick="disp('7')">7</button></td>
+                <td><button onclick="disp('8')">8</buttononclick="disp('3')"></td>
+                <td><button onclick="disp('9')">9</button></td>
+                 
+            </tr>
+         <tr>  
+                <td><button onclick="disp('0')">0</button></td>
+                <td><button onclick="disp('00')">00</buttononclick="disp('3')"></td>
+                <td><button onclick="disp('.')">.</button></td>
+                <td><button onclick="solve()">=</button></td>
+            
+            </tr></table>
+    </body>
+</html>
