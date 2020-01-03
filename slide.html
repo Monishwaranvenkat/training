@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+$(".object").mousemove(function(e)
+{
+	$(".object").stop().animate({ height:'125px'});
+});
+$(".back").mousemove(function(e)
+		{
+		$(".object").stop().animate({height:'50px'});
+		});
+});
+$(document).ready(function(){
+$(".object1").mousemove(function(e)
+{
+	$(".object1").stop().animate({ height:'125px'});
+});
+$(".back").mousemove(function(e)
+		{
+		$(".object1").stop().animate({height:'50px'});
+		});
+});
+$(document).ready(function(){
+$(".object2").mousemove(function(e)
+{
+	$(".object2").stop().animate({ height:'125px'});
+});
+$(".back").mousemove(function(e)
+		{
+		$(".object2").stop().animate({height:'50px'});
+		});
+});
+$(document).ready(function(){
+$(".object3").mousemove(function(e)
+{
+	$(".object3").stop().animate({ height:'125px'});
+});
+$(".back").mousemove(function(e)
+		{
+		$(".object3").stop().animate({height:'50px'});
+		});
+		$(".object4").mousemove(function(e)
+{
+	$(".object4").stop().animate({ height:'125px'});
+});
+$(".back").mousemove(function(e)
+		{
+		$(".object4").stop().animate({height:'50px'});
+		});
+
+});
+
+        </script>
+        <style>
+       .object{
+		
+		position: absolute;
+		height: 50px;
+		width: 75px;
+		background: blue;
+
+	}
+    .object1{
+		
+		position: absolute;
+		left:100px;
+		height: 50px;
+		width: 75px;
+		background: greenyellow;
+
+	}
+    .object2{
+		
+		position: absolute;
+		left:200px;
+		height: 50px;
+		width: 75px;
+		background: yellow;
+
+	}
+    .object3{
+		
+		position: absolute;
+		height: 50px;
+		width: 75px;
+		left:300px;
+		background: red;
+
+	}
+	.object4{
+		position: absolute;
+		height: 50px;
+		width: 75px;
+		left:400px;
+		background: orange;
+	}
+    .back{
+		
+		position: absolute;
+		height: 500px;
+		width: 750px;
+
+	}
+   
+        </style>
+    </head>
+    <body>
+        <div class ="back"></div>
+	<div class="object"></div>
+    <div class="object1"></div><div class="object2"></div><div class="object3"></div><div class="object4"></div>
+    
+    </body>
+</html>

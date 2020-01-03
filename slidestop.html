@@ -1,0 +1,41 @@
+<html>
+    <head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script>
+        var c=0;
+        function cli()
+        {
+            if(c==0)
+            {
+                         $(document).ready(function(){
+                         $("div").slideToggle(10000);
+                            });
+                             c=1;
+                            }
+        else
+        {
+            $(document).ready(function(){
+               $("div").stop();
+            });
+            c=0;
+        }
+    }
+    
+    </script>
+    <style>
+       div {
+           width: 100%;
+           height: 100%;
+           background-color:#6699ff;
+            display: none;
+        }
+    </style>
+    </head>
+<body>
+    <button id="start" onclick="cli()">click</button>
+    <div></div>
+
+</body>
+</html>

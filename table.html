@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/query.min.js"></script>
+        <script>
+        function next(){
+        var grade=document.getElementById("grade");
+        var credit=document.getElementById("credit");
+
+        if(grade.options[grade.selectedIndex].value=="null" ||credit.options[credit.selectedIndex].value =="null")
+        {
+            alert("Please select a value");
+        }
+        else{
+            var total=parseInt(grade.options[grade.selectedIndex].value)*parseInt(credit.options[credit.selectedIndex].value);
+            var total_credit=parseInt(credit.options[credit.selectedIndex].value)+parseInt(document.getElementById("total_credit").textContent);
+            total=parseInt(document.getElementById("total").textContent)+total;
+            document.getElementById("total").innerHTML=total;
+            document.getElementById("total_credit").innerHTML=total_credit;
+        }
+    document.getElementById("credit").innerText.option=--select credit--;
+    }
+    function calculate(){
+        var tot=parseInt(document.getElementById("total").textContent);
+        var credit=parseInt(document.getElementById("total_credit").textContent);
+        var cgpa=tot/credit;
+        document.getElementById("cgpa").innerHTML=cgpa.toFixed(2);
+
+    }
+        </script>
+        <style>
+       
+        </style>
+    </head>
+    <body>
+       <h1>cgpa</h1>
+       <lable>credit:</lable>  <select id="credit">
+                            <option value="null" >--select credit--</option>
+                            <option value="1">One</option>
+                            <option value="2" >Two</option>
+                            <option value="3">Three</option>
+                            <option value="4">Four</option>
+                        </select>
+                        <hr>
+        <label>grade</label>:<select id="grade">
+                            <option value="null" selected="selected">--select grade--</option>
+                            <option value="10">O</option>
+                            <option value="9">A+</option>
+                            <option value="8">A</option>
+                            <option value="7">B+</option>
+                            <option value="6">B</option>
+                            <option value="5">C</option>
+                            <option value="0">FAIL</option>
+                        </select>
+                        <hr>
+                        <button type="button" id="calc" onclick="calculate()"> calculate</button>
+                        <button type="button" id="next" onclick="next()">next</button>
+                        
+                        <table>
+                <thead>
+                    <tr>
+                        <th>sum</th>
+                        <th>credit</th>
+                        <th>cgpa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><p id="total">0</p></td>
+                        <td><p id="total_credit">0</p></td>
+                        <td><p id="cgpa">0</p></td>
+                    </tr>
+                </tbody>
+            </table>  
+    </body>
+</html>

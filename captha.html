@@ -1,0 +1,46 @@
+<html>
+  <head>
+ <script src="jquery.min.js"></script>
+    <script type="text/javascript">
+    var randomstring = '';
+      function check(){
+          var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+    var string_length = 10;
+	var randomstring = '';
+	for (var i=0; i<string_length; i++) {
+		var rnum = Math.floor(Math.random() * chars.length);
+		randomstring += chars.substring(rnum,rnum+1);
+	}
+	document.getElementById("cap").innerHTML=randomstring;
+      }
+      function checkcap()
+      {
+          v1=document.getElementById("cap").innerHTML
+          v2=document.getElementById("check").value
+        if(v1==v2)
+        {
+            alert(" login succces full");
+        }else{
+             alert(" error");
+             check();
+        }
+      }
+
+
+    </script>
+    <style>
+    p{
+      -webkit-user-select: none; 
+    }
+    </style>
+  </head>
+  <body onload="check()" >
+   <table>
+     <tr><td><label>E mail  </label></td> <td><input type="text"></td></tr>  
+      <tr><td><label>password</lable></td> <td><input type="password"></td></tr>
+      <tr><td><p id="cap" style="border: 1px solid black ;width:100px;"> </p></td></tr>
+     <tr><td> captcha</td><td><input type="text" id="check"></td></tr>
+      <tr><td><button onclick="checkcap()">submit</button></td></tr>
+ </table>
+  </body>
+</html>

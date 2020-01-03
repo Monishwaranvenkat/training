@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+        
+            $(document).ready(function(){
+                $(document).click(function(){
+                    
+                   var x=event.clientX-40;
+                   var y=event.clientY-40
+                   ;
+                   var propertyName = 'margin-top';
+                    var value = y+'px';
+                    var p2='margin-left'
+                    var v2=x+'px'
+                   $("div").css(propertyName,value);
+                   $("div").css(p2,v2);
+                });
+            });
+            </script>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    position: absolute;
+    margin-top:10px;
+    margin-left:10px;
+    }
+    </style>
+    </head>
+<body>
+<div></div>
+</body>
+</html>

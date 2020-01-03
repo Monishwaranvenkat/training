@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+        var count=0;
+	var count1=0;
+	var count2=0;
+		$(document).ready(function(){
+		$("#clor").on("click",function(e){
+			count++;
+			if(count%2==1)
+				$(".object").css("background-color","red");
+			else
+				$(".object").css("background-color","green");
+		});
+	});
+		$(document).ready(function(){
+		$("#bor").on("click",function(e){
+			count1++;
+			if(count1%2==1)
+				$(".object").css("border-radius","+30px");
+			else
+				$(".object").css("border-radius","+0px");
+		});
+        $("#box").click(function()
+        {
+            $(".new").append(' <div class="object"> </div>');
+        });
+	});
+        </script>
+        <style>
+	.object{
+        margin-top: 50px;
+		width: 100px;
+        height: 100px;
+		background-color: red;
+		border-radius: 0px;
+	}
+</style>
+    </head>
+    <body>
+        <button id="clor">Toggle Colors</button>
+        <button id="bor">Toggle Rounded Borders</button>
+        <button id="box">Add a New Box:</button>
+        <div class="new">
+        <div class="object">
+            
+        </div>
+        </div>
+    </body>
+</html>
