@@ -1,0 +1,95 @@
+<html>
+    <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script> 
+ var c=0;
+       $(document).ready(function(){
+  $("#volve").click(function(){
+      if(c==0){
+            $("#empty").slideDown(50000);
+            $("#volve").css("background-color","green");
+            $("#vwater").show();
+            c=1;
+    }else{
+        $("#empty").stop();
+         $("#volve").css("background-color","red");
+         $("#vwater").hide();
+        c=0;
+    }
+    
+  });
+});
+
+</script>
+
+<style>
+#tank{
+    width: 200px;
+    height: 300px;
+    border: 2px solid black;
+    border-top-left-radius: 5%;
+    border-top-right-radius:5% ;
+}
+
+#water{
+    background-color: cyan;
+    margin-top: 20px;
+    width: 200px;
+    height: 280px;
+}
+#empty{
+     background-color: white;
+    margin-top: 20px;
+    width: 200px;
+    height: 280px;
+    display: none;
+}
+#htap{
+    margin-top: -10px;
+    margin-left: 200px;
+    width: 100px;
+    height:12px;
+    background-color: brown;
+    float: left;
+}
+#vtap{
+     margin-top: -20px;
+    margin-left: 300px;
+    background-color: brown;
+    float: left;
+    width: 12px;
+    height: 40px;
+}
+#volve{
+     margin-top: -30px;
+    margin-left: -20px;
+    background-color: red;
+    float: left;
+    width: 30px;
+    height: 10px;
+}
+#vwater{
+    margin-top: 15px;
+    margin-left: 305px;
+    width: 7px;
+    height: 50%;
+    background-color: cyan;
+    display: none;
+}
+</style>
+    </head>
+    <body>
+        <div id="tank">
+           
+            <div id="water">
+            <div id="empty"></div>
+            </div>
+            <div id="htap">
+
+        </div>
+        <div id="vtap"></div>
+        </div>
+        <div id="volve"></div>
+        <div id="vwater"></div>
+    </body>
+</html>
