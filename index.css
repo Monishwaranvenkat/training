@@ -2,6 +2,9 @@ body{
     background-color: grey;
     margin: 0em;
 }
+.i1{
+    margin-left: 500px;
+}
 .head{
     width: 100%;
     height:100px;
@@ -16,12 +19,47 @@ body{
 .body-content{
     background-color: #e0ebeb;
     margin:10px;
+    
     text-align: center;
+    height: 500px;
 }
 .form-table{
-    margin-left: 20%;
+    
+    padding:0 ;
+    padding-top: 100px;
+    
    font-size: 25px;
    font-weight:10px;
-   border:5px solid black;
-   height:100px;
+   margin-left: -70px;
+   height:400px;
+   
 }
+.form-table.thead.th{
+  
+    text-align: center;
+}
+
+
+.inpt-txt{
+    text-align: none;
+    width: 30em;
+    height:2em;
+    border-radius: 5px;
+    border:none;
+}
+.bt-submit{
+    height:35px;
+    width: 5em;
+    border-radius: 5px;
+    border:none;
+    background-color: #009973;
+    text-align: center;
+    color: white;
+}
+.bt-submit:hover{
+    background-color: #00664d;
+}
+.frm-cent{
+    text-align: center;
+}
+
